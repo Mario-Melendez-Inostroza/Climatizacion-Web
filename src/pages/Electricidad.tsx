@@ -1,11 +1,11 @@
 import ServicePage from "@/components/ServicePage";
 import { servicios } from "@/data/servicios";
-import fotoPinzaAmperimetrica from "@/img/deteccion_fugas_con_gas_trazador.jpeg";
+import fotoPinzaAmperimetrica from "@/img/deteccion_fugas_con_gas_trazador.webp";
 
 const s = servicios.find((x) => x.ruta === "/electricidad")!;
 
 const galeria = [
-  { src: fotoPinzaAmperimetrica, nombre: "Medición eléctrica con pinza amperimétrica" },
+  { src: fotoPinzaAmperimetrica, nombre: "Medición eléctrica con pinza amperimétrica", width: 800, height: 600 },
 ];
 
 export default function Electricidad() {

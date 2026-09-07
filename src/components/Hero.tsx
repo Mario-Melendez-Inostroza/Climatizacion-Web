@@ -1,6 +1,7 @@
 import { ChevronDown, ShieldCheck } from "lucide-react";
 import { WhatsAppIcon } from "@/components/BrandIcons";
-import heroBg from "@/img/Imagen_hero.png";
+import { contacto } from "@/data/servicios";
+import heroBg from "@/img/Imagen_hero.webp";
 
 const serviciosTitulo = ["Gasfitería", "Climatización", "Electricidad"];
 
@@ -22,16 +23,23 @@ export default function Hero() {
         overflow: "hidden",
       }}
     >
-      {/* Fondo: foto real del cliente — tuberías/gasfitería, climatización y tablero eléctrico en una sola escena */}
-      <div
-        aria-hidden
+      {/* Fondo: foto real del cliente — tuberías/gasfitería, climatización y tablero eléctrico en una sola escena.
+          Es la imagen LCP de la página: se carga como <img> (no CSS background) con fetchPriority="high"
+          y sin lazy-load para que el navegador la priorice desde el primer instante. */}
+      <img
+        src={heroBg}
+        alt="Técnicos de Soluciones Integrales M&N trabajando en gasfitería, climatización y electricidad"
+        width={1672}
+        height={941}
+        fetchPriority="high"
+        decoding="async"
         style={{
           position: "absolute",
           inset: 0,
-          backgroundImage: `url(${heroBg})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
+          width: "100%",
+          height: "100%",
+          objectFit: "cover",
+          objectPosition: "center",
         }}
       />
       {/* Overlay navy: da legibilidad al texto sin ocultar la fotografía */}
@@ -147,7 +155,7 @@ export default function Hero() {
           }}
         >
           <a
-            href="https://wa.me/56953394409"
+            href={contacto.whatsappHref}
             target="_blank"
             rel="noreferrer"
             style={{

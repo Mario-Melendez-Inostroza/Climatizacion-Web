@@ -1,11 +1,11 @@
 import ServicePage from "@/components/ServicePage";
 import { servicios } from "@/data/servicios";
-import fotoAireAcondicionado from "@/img/aire_acondicionado.jpeg";
+import fotoAireAcondicionado from "@/img/aire_acondicionado.webp";
 
 const s = servicios.find((x) => x.ruta === "/climatizacion")!;
 
 const galeria = [
-  { src: fotoAireAcondicionado, nombre: "Instalación de aire acondicionado" },
+  { src: fotoAireAcondicionado, nombre: "Instalación de aire acondicionado", width: 800, height: 450 },
 ];
 
 export default function Climatizacion() {

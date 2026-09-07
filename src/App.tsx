@@ -4,6 +4,7 @@ import Home from "@/pages/Home";
 import Gasfiteria from "@/pages/Gasfiteria";
 import Climatizacion from "@/pages/Climatizacion";
 import Electricidad from "@/pages/Electricidad";
+import NotFound from "@/pages/NotFound";
 
 // Al cambiar de ruta, React Router no resetea el scroll (a diferencia de una
 // navegación tradicional): sin esto, una página nueva se abre en el mismo
@@ -29,6 +30,7 @@ export default function App() {
         <Route path="/gasfiteria" element={<Gasfiteria />} />
         <Route path="/climatizacion" element={<Climatizacion />} />
         <Route path="/electricidad" element={<Electricidad />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
   );

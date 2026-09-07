@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import logoImg from "@/imports/WhatsApp_Image_2026-09-06_at_ff.jpeg";
+import logoImg from "@/img/logo-footer.webp";
 import { servicios, contacto } from "@/data/servicios";
 import { WhatsAppIcon, InstagramIcon, FacebookIcon } from "@/components/BrandIcons";
 
@@ -27,6 +27,10 @@ export default function Footer() {
               <img
                 src={logoImg}
                 alt="M&N Soluciones Integrales"
+                width={38}
+                height={38}
+                loading="lazy"
+                decoding="async"
                 style={{ width: 38, height: 38, objectFit: "contain", borderRadius: 8 }}
               />
               <div>

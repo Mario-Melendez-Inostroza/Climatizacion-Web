@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { WhatsAppIcon } from "@/components/BrandIcons";
+import { contacto } from "@/data/servicios";
 import logoNavy from "@/img/logo2.0.png";
 import logoLight from "@/img/logo2.0-light.png";
 
@@ -88,6 +89,9 @@ export default function Navbar() {
           <img
             src={transparent ? logoLight : logoNavy}
             alt="M&N Soluciones Integrales"
+            width={104}
+            height={52}
+            decoding="async"
             style={{ height: 52, width: "auto", objectFit: "contain", display: "block" }}
           />
         </Link>
@@ -114,7 +118,7 @@ export default function Navbar() {
             </a>
           ))}
           <a
-            href="https://wa.me/56953394409"
+            href={contacto.whatsappHref}
             target="_blank"
             rel="noreferrer"
             style={{
@@ -159,7 +163,8 @@ export default function Navbar() {
 
       {/* Mobile menu */}
       {open && (
-        <div
+        <nav
+          aria-label="Menú móvil"
           style={{
             background: "#fff",
             borderTop: "1px solid #E2E8F0",
@@ -187,7 +192,7 @@ export default function Navbar() {
             </a>
           ))}
           <a
-            href="https://wa.me/56953394409"
+            href={contacto.whatsappHref}
             target="_blank"
             rel="noreferrer"
             style={{
@@ -209,7 +214,7 @@ export default function Navbar() {
             <WhatsAppIcon size={18} />
             Contactar por WhatsApp
           </a>
-        </div>
+        </nav>
       )}
     </header>
   );

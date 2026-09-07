@@ -5,10 +5,13 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 import { contacto } from "@/data/servicios";
+import { useDocumentMeta } from "@/hooks/useDocumentMeta";
 
 interface FotoTrabajo {
   src: string;
   nombre: string;
+  width: number;
+  height: number;
 }
 
 interface ServicePageProps {
@@ -21,10 +24,15 @@ interface ServicePageProps {
 }
 
 export default function ServicePage({ titulo, descripcion, acento, items, imagen, galeria }: ServicePageProps) {
+  useDocumentMeta({
+    title: `${titulo} en Santiago | Soluciones Integrales M&N`,
+    description: descripcion,
+  });
+
   return (
     <div style={{ background: "#fff", minHeight: "100vh" }}>
       <Navbar />
-
+      <main>
       {/* Hero de la página de servicio */}
       <section
         style={{
@@ -186,6 +194,10 @@ export default function ServicePage({ titulo, descripcion, acento, items, imagen
                 <img
                   src={foto.src}
                   alt={foto.nombre}
+                  width={foto.width}
+                  height={foto.height}
+                  loading="lazy"
+                  decoding="async"
                   style={{ width: "100%", height: 170, objectFit: "cover", display: "block" }}
                 />
                 <figcaption style={{
@@ -249,6 +261,7 @@ export default function ServicePage({ titulo, descripcion, acento, items, imagen
           Escribir por WhatsApp
         </a>
       </section>
+      </main>
 
       <Footer />
       <FloatingWhatsApp />

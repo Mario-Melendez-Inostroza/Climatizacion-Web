@@ -5,6 +5,15 @@
   "robots": {
     "index": true
   },
+  "icons": {
+    "icon": "/favicon.png"
+  },
+  "openGraph": {
+    "image": "https://climatizacion-web.vercel.app/og-image.jpg"
+  },
+  "customScripts": {
+    "headEnd": "<script type=\"application/ld+json\">{\"@context\":\"https://schema.org\",\"@type\":\"HomeAndConstructionBusiness\",\"name\":\"Soluciones Integrales M&N\",\"telephone\":\"+56931286291\",\"areaServed\":\"Santiago, Chile\",\"url\":\"https://climatizacion-web.vercel.app/\",\"makesOffer\":[{\"@type\":\"Offer\",\"itemOffered\":{\"@type\":\"Service\",\"name\":\"Gasfitería\",\"url\":\"https://climatizacion-web.vercel.app/gasfiteria\"}},{\"@type\":\"Offer\",\"itemOffered\":{\"@type\":\"Service\",\"name\":\"Climatización\",\"url\":\"https://climatizacion-web.vercel.app/climatizacion\"}},{\"@type\":\"Offer\",\"itemOffered\":{\"@type\":\"Service\",\"name\":\"Electricidad\",\"url\":\"https://climatizacion-web.vercel.app/electricidad\"}}]}</script>"
+  },
   "accessibility": {
     "addBypassLinks": false,
     "ignoreReducedMotion": false

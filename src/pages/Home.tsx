@@ -8,9 +8,15 @@ import Clientes from "@/components/Clientes";
 import Contacto from "@/components/Contacto";
 import Footer from "@/components/Footer";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
+import { useDocumentMeta } from "@/hooks/useDocumentMeta";
 
 export default function Home() {
   const location = useLocation();
+
+  useDocumentMeta({
+    title: "Soluciones Integrales M&N | Gasfitería, Climatización y Electricidad en Santiago",
+    description: "Técnicos certificados SEC en gasfitería, climatización y electricidad para hogares y empresas en Santiago y alrededores.",
+  });
 
   useEffect(() => {
     const target = (location.state as { scrollTo?: string } | null)?.scrollTo;
@@ -24,11 +30,13 @@ export default function Home() {
   return (
     <div style={{ background: "#fff", minHeight: "100%" }}>
       <Navbar />
-      <Hero />
-      <Servicios />
-      <Nosotros />
-      <Clientes />
-      <Contacto />
+      <main>
+        <Hero />
+        <Servicios />
+        <Nosotros />
+        <Clientes />
+        <Contacto />
+      </main>
       <Footer />
       <FloatingWhatsApp />
     </div>

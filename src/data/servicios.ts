@@ -1,6 +1,6 @@
-import fotoGasfiteria from "@/img/destape_camara_filtracion.jpeg";
-import fotoClimatizacion from "@/img/aire_acondicionado.jpeg";
-import fotoElectricidad from "@/img/instalacion_focos.jpeg";
+import fotoGasfiteria from "@/img/destape_camara_filtracion.webp";
+import fotoClimatizacion from "@/img/aire_acondicionado.webp";
+import fotoElectricidad from "@/img/instalacion_focos.webp";
 
 export interface Servicio {
   nombre: string;
