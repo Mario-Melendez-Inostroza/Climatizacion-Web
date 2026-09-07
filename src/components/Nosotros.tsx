@@ -1,12 +1,12 @@
-import { ShieldCheck, Wrench, Clock, MapPin, Building2, Layers, Droplets, Snowflake, Zap } from "lucide-react";
+import { ShieldCheck, Droplets, Snowflake, Zap, CheckCircle2 } from "lucide-react";
 
 const confianza = [
-  { icon: ShieldCheck, titulo: "Certificados SEC",       desc: "Instalaciones autorizadas y seguras" },
-  { icon: Wrench,      titulo: "Maquinaria profesional", desc: "Equipos de última generación" },
-  { icon: Clock,       titulo: "Puntualidad",            desc: "Respetamos tu tiempo siempre" },
-  { icon: Building2,   titulo: "Hogar y empresas",       desc: "Residencial, comercial e industrial" },
-  { icon: MapPin,      titulo: "Santiago y alrededores", desc: "Cobertura en toda la región" },
-  { icon: Layers,      titulo: "Soluciones integrales",  desc: "Las tres áreas bajo una sola empresa" },
+  { titulo: "Certificados SEC",       desc: "Instalaciones autorizadas y seguras" },
+  { titulo: "Maquinaria profesional", desc: "Equipos de última generación" },
+  { titulo: "Puntualidad",            desc: "Respetamos tu tiempo siempre" },
+  { titulo: "Hogar y empresas",       desc: "Residencial, comercial e industrial" },
+  { titulo: "Santiago y alrededores", desc: "Cobertura en toda la región" },
+  { titulo: "Soluciones integrales",  desc: "Las tres áreas bajo una sola empresa" },
 ];
 
 const serviciosIcons = [
@@ -45,38 +45,29 @@ export default function Nosotros() {
               letterSpacing: "-0.03em",
               color: "#fff",
             }}>
-              Trabajo profesional,<br />resultados que duran
+              Trabajo profesional<br />resultados que duran
             </h2>
           </div>
 
-          {/* Lista editorial — sin tarjetas, con divisores sutiles */}
+          {/* Grilla de tarjetas con check verde */}
           <div
             className="grid grid-cols-1 sm:grid-cols-2"
-            style={{ columnGap: "3rem" }}
+            style={{ gap: "1rem" }}
           >
-            {confianza.map(({ icon: Icon, titulo, desc }, i) => (
+            {confianza.map(({ titulo, desc }) => (
               <div
                 key={titulo}
                 style={{
                   display: "flex",
                   alignItems: "flex-start",
-                  gap: "1.1rem",
-                  padding: "1.35rem 0",
-                  borderBottom: i < confianza.length - (confianza.length % 2 === 0 ? 2 : 1) ? "1px solid rgba(255,255,255,0.08)" : "none",
+                  gap: "0.9rem",
+                  padding: "1.35rem 1.5rem",
+                  background: "rgba(255,255,255,0.04)",
+                  border: "1px solid rgba(255,255,255,0.08)",
+                  borderRadius: 14,
                 }}
               >
-                <div style={{
-                  width: 40,
-                  height: 40,
-                  borderRadius: "50%",
-                  border: "1px solid rgba(96,165,250,0.35)",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  flexShrink: 0,
-                }}>
-                  <Icon size={18} color="#60A5FA" />
-                </div>
+                <CheckCircle2 size={22} color="#22C55E" style={{ flexShrink: 0, marginTop: 2 }} />
                 <div>
                   <div style={{
                     fontFamily: "'Manrope', sans-serif",
