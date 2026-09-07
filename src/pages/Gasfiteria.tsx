@@ -3,7 +3,7 @@ import { servicios } from "@/data/servicios";
 import fotoCalefont from "@/img/gasfiteria_1.jpeg";
 import fotoLavaplatos from "@/img/destape_lavaplatos.jpeg";
 import fotoPiletas from "@/img/destape_piletas.jpeg";
-import fotoRedAguaGas from "@/img/instalacion de red de agua y gas.jpeg";
+import fotoRedAguaGas from "@/img/instalacion_red_agua_gas.jpeg";
 import fotoDesague from "@/img/instalacion_desgue.jpeg";
 import fotoFugaCanheria from "@/img/reparacion_fugas.jpeg";
 import fotoGasTrazador from "@/img/deteccion_fugas_electricas.jpeg";

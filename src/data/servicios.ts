@@ -1,4 +1,4 @@
-import fotoGasfiteria from "@/img/destape de camara , reparacion filtracion.jpeg";
+import fotoGasfiteria from "@/img/destape_camara_filtracion.jpeg";
 import fotoClimatizacion from "@/img/aire_acondicionado.jpeg";
 import fotoElectricidad from "@/img/instalacion_focos.jpeg";
 
