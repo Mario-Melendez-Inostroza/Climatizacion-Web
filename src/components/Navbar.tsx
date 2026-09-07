@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { WhatsAppIcon } from "@/components/BrandIcons";
-import logoImg from "@/imports/WhatsApp_Image_2026-09-06_at_ff.jpeg";
+import logoImg from "@/img/logo2.0.png";
 
 const links = [
   { label: "Inicio", href: "/" },
@@ -76,34 +76,19 @@ export default function Navbar() {
         }}
       >
         {/* Logo */}
-        <Link to="/" style={{ display: "flex", alignItems: "center", gap: "0.75rem", textDecoration: "none" }}>
+        <Link
+          to="/"
+          style={{
+            display: "flex",
+            alignItems: "center",
+            textDecoration: "none",
+          }}
+        >
           <img
             src={logoImg}
             alt="M&N Soluciones Integrales"
-            style={{ width: 42, height: 42, objectFit: "contain", borderRadius: 8 }}
+            style={{ height: 52, width: "auto", objectFit: "contain", display: "block" }}
           />
-          <div style={{ lineHeight: 1.15 }}>
-            <div style={{
-              fontFamily: "'Manrope', sans-serif",
-              fontWeight: 800,
-              fontSize: "1.1rem",
-              color: transparent ? "#fff" : "#0F172A",
-              letterSpacing: "-0.03em",
-              transition: "color 0.3s",
-            }}>
-              M&amp;N
-            </div>
-            <div style={{
-              fontFamily: "'Inter', sans-serif",
-              fontSize: "0.58rem",
-              color: transparent ? "rgba(255,255,255,0.7)" : "#64748B",
-              letterSpacing: "0.1em",
-              textTransform: "uppercase",
-              transition: "color 0.3s",
-            }}>
-              Soluciones Integrales
-            </div>
-          </div>
         </Link>
 
         {/* Desktop nav */}
