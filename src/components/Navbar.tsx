@@ -2,7 +2,8 @@ import { useState, useEffect } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { WhatsAppIcon } from "@/components/BrandIcons";
-import logoImg from "@/img/logo2.0.png";
+import logoNavy from "@/img/logo2.0.png";
+import logoLight from "@/img/logo2.0-light.png";
 
 const links = [
   { label: "Inicio", href: "/" },
@@ -85,7 +86,7 @@ export default function Navbar() {
           }}
         >
           <img
-            src={logoImg}
+            src={transparent ? logoLight : logoNavy}
             alt="M&N Soluciones Integrales"
             style={{ height: 52, width: "auto", objectFit: "contain", display: "block" }}
           />
