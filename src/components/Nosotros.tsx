@@ -1,4 +1,4 @@
-import { Droplets, Snowflake, Zap, CheckCircle2 } from "lucide-react";
+import { ShieldCheck, Droplets, Snowflake, Zap, CheckCircle2 } from "lucide-react";
 import logoSec from "@/img/logo-sec.webp";
 
 const confianza = [
@@ -150,6 +150,15 @@ export default function Nosotros() {
 
           {/* Composición visual: tres servicios, con ícono de color */}
           <div style={{ display: "flex", flexDirection: "column", gap: "0.85rem" }}>
+            <img
+              src={logoSec}
+              alt="Certificado SEC - Superintendencia de Electricidad y Combustibles"
+              width={110}
+              height={110}
+              loading="lazy"
+              decoding="async"
+              style={{ width: 110, height: 110, alignSelf: "center", marginBottom: "0.5rem" }}
+            />
             {serviciosIcons.map(({ icon: Icon, label, color, bg }) => (
               <div
                 key={label}
@@ -201,15 +210,7 @@ export default function Nosotros() {
                   fontWeight: 700,
                   letterSpacing: "0.02em",
                 }}>
-                  <img
-                    src={logoSec}
-                    alt=""
-                    width={16}
-                    height={16}
-                    loading="lazy"
-                    decoding="async"
-                    style={{ width: 16, height: 16, borderRadius: "50%", flexShrink: 0 }}
-                  />
+                  <ShieldCheck size={12} />
                   SEC certificado
                 </span>
               </div>
