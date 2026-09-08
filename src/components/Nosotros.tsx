@@ -1,4 +1,5 @@
-import { ShieldCheck, Droplets, Snowflake, Zap, CheckCircle2 } from "lucide-react";
+import { Droplets, Snowflake, Zap, CheckCircle2 } from "lucide-react";
+import logoSec from "@/img/logo-sec.webp";
 
 const confianza = [
   { titulo: "Certificados SEC",       desc: "Instalaciones autorizadas y seguras" },
@@ -200,7 +201,15 @@ export default function Nosotros() {
                   fontWeight: 700,
                   letterSpacing: "0.02em",
                 }}>
-                  <ShieldCheck size={12} />
+                  <img
+                    src={logoSec}
+                    alt=""
+                    width={16}
+                    height={16}
+                    loading="lazy"
+                    decoding="async"
+                    style={{ width: 16, height: 16, borderRadius: "50%", flexShrink: 0 }}
+                  />
                   SEC certificado
                 </span>
               </div>
