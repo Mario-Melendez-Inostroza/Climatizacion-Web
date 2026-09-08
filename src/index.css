@@ -60,3 +60,29 @@ h1, h2, h3, h4, h5, h6 {
 .fade-up-delay-2 { animation-delay: 0.2s; opacity: 0; }
 .fade-up-delay-3 { animation-delay: 0.3s; opacity: 0; }
 .fade-up-delay-4 { animation-delay: 0.4s; opacity: 0; }
+
+/* Hero en mobile: la foto (16:9) es mucho más ancha que la caja del hero. Para verla
+   completa (misma composición que desktop) en vez de recortada, se usa "contain" y el
+   hero se ajusta a la altura real del contenido (no 100vh) con espaciados más ajustados,
+   para minimizar el navy que queda arriba/abajo de la foto contenida. */
+@media (max-width: 767px) {
+  .hero-section {
+    min-height: auto !important;
+    padding: 6.5rem 1.25rem 2.25rem !important;
+  }
+  .hero-photo {
+    object-fit: contain !important;
+  }
+  .hero-badge {
+    margin-bottom: 1rem !important;
+  }
+  .hero-title {
+    margin-bottom: 0.5rem !important;
+  }
+  .hero-subtitle {
+    margin-bottom: 0.6rem !important;
+  }
+  .hero-desc {
+    margin-bottom: 1.25rem !important;
+  }
+}

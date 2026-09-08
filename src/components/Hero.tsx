@@ -12,6 +12,7 @@ export default function Hero() {
 
   return (
     <section
+      className="hero-section"
       style={{
         minHeight: "100vh",
         display: "flex",
@@ -27,8 +28,11 @@ export default function Hero() {
       {/* Fondo: foto real del cliente — tuberías/gasfitería, climatización y tablero eléctrico en una sola escena.
           Es la imagen LCP de la página: se carga como <img> (no CSS background) con fetchPriority="high"
           y sin lazy-load para que el navegador la priorice desde el primer instante.
-          object-fit: cover llena siempre el 100% del hero (ancho y alto), tanto en desktop como en mobile,
-          recortando los bordes según haga falta en vez de dejar espacio vacío. */}
+          Desktop: object-fit cover llena el hero a pantalla completa (la proporción de la caja es parecida
+          a la de la foto, casi no se recorta). Mobile: la foto es mucho más ancha que la caja del hero, así
+          que en vez de recortarla (cover) se usa "contain" para verla completa (misma composición que
+          desktop), y el hero se achica a la altura real del contenido en vez de forzar 100vh — así el
+          espacio navy que queda arriba/abajo de la foto se reduce al mínimo (ver index.css). */}
       <img
         src={heroBg}
         alt="Técnicos de Soluciones Integrales M&N trabajando en gasfitería, climatización y electricidad"
@@ -36,6 +40,7 @@ export default function Hero() {
         height={941}
         fetchPriority="high"
         decoding="async"
+        className="hero-photo"
         style={{
           position: "absolute",
           inset: 0,
@@ -66,7 +71,7 @@ export default function Hero() {
       <div style={{ maxWidth: 900, width: "100%", textAlign: "center", position: "relative", zIndex: 1 }}>
         {/* Badge SEC */}
         <div
-          className="fade-up fade-up-delay-1"
+          className="fade-up fade-up-delay-1 hero-badge"
           style={{
             display: "inline-flex",
             alignItems: "center",
@@ -93,7 +98,7 @@ export default function Hero() {
 
         {/* Título: tres áreas con colores diferenciados */}
         <h1
-          className="fade-up fade-up-delay-2"
+          className="fade-up fade-up-delay-2 hero-title"
           style={{
             fontFamily: "'Manrope', sans-serif",
             fontWeight: 800,
@@ -117,7 +122,7 @@ export default function Hero() {
 
         {/* Subtítulo fuerte */}
         <p
-          className="fade-up fade-up-delay-2"
+          className="fade-up fade-up-delay-2 hero-subtitle"
           style={{
             fontFamily: "'Manrope', sans-serif",
             fontWeight: 700,
@@ -132,7 +137,7 @@ export default function Hero() {
 
         {/* Descripción */}
         <p
-          className="fade-up fade-up-delay-3"
+          className="fade-up fade-up-delay-3 hero-desc"
           style={{
             color: "rgba(255,255,255,0.72)",
             fontSize: "clamp(0.9rem, 1.6vw, 1.05rem)",
