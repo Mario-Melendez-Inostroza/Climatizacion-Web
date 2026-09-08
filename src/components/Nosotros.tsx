@@ -153,11 +153,11 @@ export default function Nosotros() {
             <img
               src={logoSec}
               alt="Certificado SEC - Superintendencia de Electricidad y Combustibles"
-              width={110}
-              height={110}
+              width={190}
+              height={101}
               loading="lazy"
               decoding="async"
-              style={{ width: 110, height: 110, alignSelf: "center", marginBottom: "0.5rem" }}
+              style={{ width: 190, height: "auto", alignSelf: "center", marginBottom: "0.5rem" }}
             />
             {serviciosIcons.map(({ icon: Icon, label, color, bg }) => (
               <div
