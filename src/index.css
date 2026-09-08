@@ -60,3 +60,12 @@ h1, h2, h3, h4, h5, h6 {
 .fade-up-delay-2 { animation-delay: 0.2s; opacity: 0; }
 .fade-up-delay-3 { animation-delay: 0.3s; opacity: 0; }
 .fade-up-delay-4 { animation-delay: 0.4s; opacity: 0; }
+
+/* La foto del Hero es panorámica (16:9); en pantallas angostas y altas
+   "cover" recortaba casi todo su ancho. En mobile se ve completa con
+   "contain" sobre el fondo navy de la sección en vez de recortada. */
+@media (max-width: 767px) {
+  .hero-photo {
+    object-fit: contain !important;
+  }
+}

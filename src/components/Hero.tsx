@@ -21,11 +21,16 @@ export default function Hero() {
         padding: "8rem 1.5rem 5rem",
         position: "relative",
         overflow: "hidden",
+        background: "#0C1F3A",
       }}
     >
       {/* Fondo: foto real del cliente — tuberías/gasfitería, climatización y tablero eléctrico en una sola escena.
           Es la imagen LCP de la página: se carga como <img> (no CSS background) con fetchPriority="high"
-          y sin lazy-load para que el navegador la priorice desde el primer instante. */}
+          y sin lazy-load para que el navegador la priorice desde el primer instante.
+          En mobile la foto es mucho más ancha que alta (16:9) frente a una pantalla angosta y alta, así
+          que con "cover" se recortaba casi todo el ancho (tuberías y tablero eléctrico quedaban fuera).
+          La clase .hero-photo cambia a "contain" en mobile (ver index.css) para mostrarla completa,
+          dejando ver el fondo navy de la sección arriba/abajo en vez de recortar la imagen. */}
       <img
         src={heroBg}
         alt="Técnicos de Soluciones Integrales M&N trabajando en gasfitería, climatización y electricidad"
@@ -33,6 +38,7 @@ export default function Hero() {
         height={941}
         fetchPriority="high"
         decoding="async"
+        className="hero-photo"
         style={{
           position: "absolute",
           inset: 0,
