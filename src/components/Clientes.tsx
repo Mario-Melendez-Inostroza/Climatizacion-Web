@@ -1,14 +1,12 @@
 import { User, Home, Briefcase, Thermometer, Droplets, Store } from "lucide-react";
 
-// Paleta neutra/corporativa: esta sección clasifica tipos de CLIENTE, no áreas de
-// servicio, por lo que deliberadamente no usa los colores de gasfitería/climatización/electricidad.
 const tipos = [
   { icon: User,        label: "Personas particulares",     color: "#1E6FD9", bg: "#EBF3FF" },
-  { icon: Home,        label: "Hogares",                   color: "#1558B0", bg: "#EBF3FF" },
+  { icon: Home,        label: "Hogares",                   color: "#F59E0B", bg: "#FEF3C7" },
   { icon: Briefcase,   label: "Empresas",                  color: "#0F172A", bg: "#F1F5F9" },
-  { icon: Thermometer, label: "Empresas de climatización", color: "#1E6FD9", bg: "#EBF3FF" },
-  { icon: Droplets,    label: "Empresas de gasfitería",    color: "#1558B0", bg: "#EBF3FF" },
-  { icon: Store,       label: "Comercios y negocios",      color: "#0F172A", bg: "#F1F5F9" },
+  { icon: Thermometer, label: "Empresas de climatización", color: "#0EA5E9", bg: "#E0F2FE" },
+  { icon: Droplets,    label: "Empresas de gasfitería",    color: "#D93025", bg: "#FEF2F2" },
+  { icon: Store,       label: "Comercios y negocios",      color: "#1558B0", bg: "#EBF3FF" },
 ];
 
 export default function Clientes() {
@@ -60,12 +58,14 @@ export default function Clientes() {
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"
           style={{ gap: "1rem" }}
         >
-          {tipos.map(({ icon: Icon, label, color, bg }) => (
+          {tipos.map(({ icon: Icon, label, color, bg }, i) => (
             <div
               key={label}
+              className={`fade-up fade-up-delay-${(i % 4) + 1}`}
               style={{
                 background: "#fff",
                 border: "1px solid #E2E8F0",
+                borderLeft: `3px solid ${color}`,
                 borderRadius: 12,
                 padding: "1.4rem 1.25rem",
                 display: "flex",

@@ -1,6 +1,6 @@
 import ServicePage from "@/components/ServicePage";
 import { servicios } from "@/data/servicios";
-import fotoPinzaAmperimetrica from "@/img/deteccion_fugas_con_gas_trazador.webp";
+import fotoPinzaAmperimetrica from "@/img/Gasfiteria/deteccion_fugas_con_gas_trazador.webp";
 
 const s = servicios.find((x) => x.ruta === "/electricidad")!;
 

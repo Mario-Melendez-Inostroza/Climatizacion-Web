@@ -1,6 +1,6 @@
 import ServicePage from "@/components/ServicePage";
 import { servicios } from "@/data/servicios";
-import fotoAireAcondicionado from "@/img/aire_acondicionado.webp";
+import fotoAireAcondicionado from "@/img/Climatizacion/aire_acondicionado.webp";
 
 const s = servicios.find((x) => x.ruta === "/climatizacion")!;
 

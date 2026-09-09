@@ -3,8 +3,8 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { WhatsAppIcon } from "@/components/BrandIcons";
 import { contacto } from "@/data/servicios";
-import logoNavy from "@/img/logo2.0.png";
-import logoLight from "@/img/logo2.0-light.png";
+import logoNavy from "@/img/Logos/logo2.0.png";
+import logoLight from "@/img/Logos/logo2.0-light.png";
 
 const links = [
   { label: "Inicio", href: "/" },

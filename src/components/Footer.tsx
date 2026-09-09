@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import logoImg from "@/img/logo-footer.webp";
+import logoImg from "@/img/Logos/logo-footer.webp";
 import { servicios, contacto } from "@/data/servicios";
 import { WhatsAppIcon, InstagramIcon, FacebookIcon } from "@/components/BrandIcons";
 

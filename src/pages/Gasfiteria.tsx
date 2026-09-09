@@ -1,12 +1,12 @@
 import ServicePage from "@/components/ServicePage";
 import { servicios } from "@/data/servicios";
-import fotoCalefont from "@/img/gasfiteria_1.webp";
-import fotoLavaplatos from "@/img/destape_lavaplatos.webp";
-import fotoPiletas from "@/img/destape_piletas.webp";
-import fotoRedAguaGas from "@/img/instalacion_red_agua_gas.webp";
-import fotoDesague from "@/img/instalacion_desgue.webp";
-import fotoFugaCanheria from "@/img/reparacion_fugas.webp";
-import fotoGasTrazador from "@/img/deteccion_fugas_electricas.webp";
+import fotoCalefont from "@/img/Gasfiteria/gasfiteria_1.webp";
+import fotoLavaplatos from "@/img/Gasfiteria/destape_lavaplatos.webp";
+import fotoPiletas from "@/img/Gasfiteria/destape_piletas.webp";
+import fotoRedAguaGas from "@/img/Gasfiteria/instalacion_red_agua_gas.webp";
+import fotoDesague from "@/img/Gasfiteria/instalacion_desgue.webp";
+import fotoFugaCanheria from "@/img/Gasfiteria/reparacion_fugas.webp";
+import fotoGasTrazador from "@/img/Electricidad/deteccion_fugas_electricas.webp";
 
 const s = servicios.find((x) => x.ruta === "/gasfiteria")!;
 

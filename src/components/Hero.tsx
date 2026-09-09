@@ -1,7 +1,7 @@
 import { ChevronDown, ShieldCheck } from "lucide-react";
 import { WhatsAppIcon } from "@/components/BrandIcons";
 import { contacto } from "@/data/servicios";
-import heroBg from "@/img/Imagen_hero.webp";
+import heroBg from "@/img/Logos/Imagen_hero.webp";
 
 const serviciosTitulo = ["Gasfitería", "Climatización", "Electricidad"];
 
