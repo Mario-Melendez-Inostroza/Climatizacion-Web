@@ -161,10 +161,11 @@ export default function ServicePage({ titulo, descripcion, acento, items, imagen
           ))}
         </ul>
         <p style={{
-          color: "#64748B",
-          fontSize: "0.93rem",
+          color: acento,
+          fontSize: "0.95rem",
           fontFamily: "'Inter', sans-serif",
           fontStyle: "italic",
+          fontWeight: 700,
           marginTop: "1.1rem",
         }}>
           y más... ¡consulta el que necesites!
