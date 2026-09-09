@@ -183,7 +183,7 @@ export default function ServicePage({ titulo, descripcion, acento, items, imagen
             color: "#0F172A",
             marginBottom: "1.5rem",
           }}>
-            Algunos servicios realizados
+            Algunos trabajos realizados
           </h2>
           <div style={{
             display: "grid",
