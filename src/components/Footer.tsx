@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import logoImg from "@/img/Logos/logo-footer.webp";
+import logoImg from "@/img/Logos/logo2.0-light.png";
 import { servicios, contacto } from "@/data/servicios";
 import { WhatsAppIcon, InstagramIcon, FacebookIcon } from "@/components/BrandIcons";
 
@@ -23,25 +23,15 @@ export default function Footer() {
         >
           {/* Brand */}
           <div>
-            <div style={{ display: "flex", alignItems: "center", gap: "0.75rem", marginBottom: "0.85rem" }}>
-              <img
-                src={logoImg}
-                alt="M&N Soluciones Integrales"
-                width={38}
-                height={38}
-                loading="lazy"
-                decoding="async"
-                style={{ width: 38, height: 38, objectFit: "contain", borderRadius: 8 }}
-              />
-              <div>
-                <div style={{ fontFamily: "'Manrope', sans-serif", fontWeight: 800, fontSize: "1.05rem", color: "#fff", letterSpacing: "-0.03em" }}>
-                  M&amp;N
-                </div>
-                <div style={{ fontSize: "0.58rem", color: "#64748B", letterSpacing: "0.1em", textTransform: "uppercase", fontFamily: "'Inter', sans-serif" }}>
-                  Soluciones Integrales
-                </div>
-              </div>
-            </div>
+            <img
+              src={logoImg}
+              alt="M&N Soluciones Integrales"
+              width={160}
+              height={80}
+              loading="lazy"
+              decoding="async"
+              style={{ height: 48, width: "auto", objectFit: "contain", display: "block", marginBottom: "0.85rem" }}
+            />
             <p style={{ color: "#64748B", fontSize: "0.85rem", fontFamily: "'Inter', sans-serif", fontStyle: "italic", marginBottom: "1.25rem", lineHeight: 1.55 }}>
               "Tu tranquilidad, nuestro trabajo"
             </p>
