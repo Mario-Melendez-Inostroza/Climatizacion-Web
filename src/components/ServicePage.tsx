@@ -137,7 +137,7 @@ export default function ServicePage({ titulo, descripcion, acento, items, imagen
           color: "#0F172A",
           marginBottom: "1.5rem",
         }}>
-          ¿Qué incluye?
+          Servicios
         </h2>
         <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: "0.65rem" }}>
           {items.map((item) => (
@@ -160,6 +160,15 @@ export default function ServicePage({ titulo, descripcion, acento, items, imagen
             </li>
           ))}
         </ul>
+        <p style={{
+          color: "#64748B",
+          fontSize: "0.93rem",
+          fontFamily: "'Inter', sans-serif",
+          fontStyle: "italic",
+          marginTop: "1.1rem",
+        }}>
+          y más... ¡consulta el que necesites!
+        </p>
       </section>
 
       {/* Galería: fotos reales de trabajos realizados, con el nombre del trabajo debajo de cada una */}
@@ -173,7 +182,7 @@ export default function ServicePage({ titulo, descripcion, acento, items, imagen
             color: "#0F172A",
             marginBottom: "1.5rem",
           }}>
-            Trabajos realizados
+            Algunos servicios realizados
           </h2>
           <div style={{
             display: "grid",
