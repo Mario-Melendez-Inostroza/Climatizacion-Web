@@ -5,7 +5,6 @@ import { WhatsAppIcon } from "@/components/BrandIcons";
 import { contacto } from "@/data/servicios";
 import logoNavy from "@/img/logo2.0.png";
 import logoLight from "@/img/logo2.0-light.png";
-import logoSec from "@/img/logo-sec.webp";
 
 const links = [
   { label: "Inicio", href: "/" },
@@ -78,45 +77,23 @@ export default function Navbar() {
           justifyContent: "space-between",
         }}
       >
-        {/* Logo + insignia SEC */}
-        <div style={{ display: "flex", alignItems: "center", gap: "0.85rem" }}>
-          <Link
-            to="/"
-            style={{
-              display: "flex",
-              alignItems: "center",
-              textDecoration: "none",
-            }}
-          >
-            <img
-              src={transparent ? logoLight : logoNavy}
-              alt="M&N Soluciones Integrales"
-              width={104}
-              height={52}
-              decoding="async"
-              style={{ height: 52, width: "auto", objectFit: "contain", display: "block" }}
-            />
-          </Link>
-          <div
-            style={{
-              display: "flex",
-              alignItems: "center",
-              background: "rgba(255,255,255,0.95)",
-              borderRadius: 8,
-              padding: "0.3rem 0.5rem",
-              boxShadow: "0 1px 6px rgba(0,0,0,0.15)",
-            }}
-          >
-            <img
-              src={logoSec}
-              alt="Certificado SEC - Superintendencia de Electricidad y Combustibles"
-              width={72}
-              height={38}
-              decoding="async"
-              style={{ height: 24, width: "auto", objectFit: "contain", display: "block" }}
-            />
-          </div>
-        </div>
+        <Link
+          to="/"
+          style={{
+            display: "flex",
+            alignItems: "center",
+            textDecoration: "none",
+          }}
+        >
+          <img
+            src={transparent ? logoLight : logoNavy}
+            alt="M&N Soluciones Integrales"
+            width={104}
+            height={52}
+            decoding="async"
+            style={{ height: 52, width: "auto", objectFit: "contain", display: "block" }}
+          />
+        </Link>
 
         {/* Desktop nav */}
         <nav style={{ alignItems: "center", gap: "1.75rem" }} className="hidden md:flex">
