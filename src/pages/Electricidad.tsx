@@ -25,6 +25,7 @@ export default function Electricidad() {
       items={s.items}
       imagen={s.imagen}
       galeria={galeria}
+      rutaActual={s.ruta}
     />
   );
 }

@@ -31,6 +31,7 @@ export default function Climatizacion() {
       items={s.items}
       imagen={s.imagen}
       galeria={galeria}
+      rutaActual={s.ruta}
     />
   );
 }

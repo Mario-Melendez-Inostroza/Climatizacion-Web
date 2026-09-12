@@ -40,6 +40,7 @@ export default defineConfig(({ mode }) => {
 type SiteConfig = {
   title?: string
   description?: string
+  siteUrl?: string
   language?: string
   robots?: {
     index?: boolean
@@ -78,6 +79,7 @@ function siteMetaPlugin(config: SiteConfig): Plugin {
 
   const title = config.title ?? "Soluciones Integrales M&N"
   const description = config.description ?? ''
+  const siteUrl = config.siteUrl ?? ''
   const favicon = config.icons?.icon ?? ''
   const socialImage = config.openGraph?.image ?? ''
   const language = sanitizeHtmlValue(config.language) || 'en'
@@ -133,6 +135,17 @@ function siteMetaPlugin(config: SiteConfig): Plugin {
         }
         if (description) {
           tags.push({ tag: 'meta', attrs: { property: 'og:description', content: description }, injectTo: 'head' })
+        }
+        if (siteUrl) {
+          // Único index.html estático para toda la SPA: og:url/canonical no pueden
+          // variar por ruta a nivel de build sin prerenderizado, así que aquí solo
+          // se fija el valor correcto para la home. Un link compartido a una
+          // subpágina (/gasfiteria, etc.) seguirá mostrando esta URL en la vista
+          // previa social hasta que se implemente prerenderizado por ruta.
+          tags.push(
+            { tag: 'meta', attrs: { property: 'og:url', content: siteUrl + '/' }, injectTo: 'head' },
+            { tag: 'meta', attrs: { property: 'og:type', content: 'website' }, injectTo: 'head' },
+          )
         }
         if (socialImage) {
           tags.push(

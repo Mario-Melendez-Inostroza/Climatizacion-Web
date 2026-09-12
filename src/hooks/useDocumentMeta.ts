@@ -3,6 +3,7 @@ import { useEffect } from "react";
 interface DocumentMeta {
   title: string;
   description: string;
+  noIndex?: boolean;
 }
 
 function setMetaTag(name: string, content: string) {
@@ -30,10 +31,13 @@ function setCanonical(href: string) {
  * SPA with a single static index.html, so without this every route would share
  * the same title/description — a duplicate-content SEO issue.
  */
-export function useDocumentMeta({ title, description }: DocumentMeta) {
+export function useDocumentMeta({ title, description, noIndex }: DocumentMeta) {
   useEffect(() => {
     document.title = title;
     setMetaTag("description", description);
     setCanonical(window.location.origin + window.location.pathname);
-  }, [title, description]);
+    if (noIndex) {
+      setMetaTag("robots", "noindex, nofollow");
+    }
+  }, [title, description, noIndex]);
 }

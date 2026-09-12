@@ -7,6 +7,7 @@ export default function NotFound() {
   useDocumentMeta({
     title: "Página no encontrada | Soluciones Integrales M&N",
     description: "La página que buscas no existe. Vuelve al inicio de Soluciones Integrales M&N.",
+    noIndex: true,
   });
 
   return (

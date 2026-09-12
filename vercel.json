@@ -1,5 +1,17 @@
 {
-  "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }],
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "climatizacion-web.vercel.app" }],
+      "destination": "https://www.solucionesintegralesmyn.cl/:path*",
+      "permanent": true
+    }
+  ],
+  "rewrites": [
+    { "source": "/gasfiteria", "destination": "/index.html" },
+    { "source": "/climatizacion", "destination": "/index.html" },
+    { "source": "/electricidad", "destination": "/index.html" }
+  ],
   "headers": [
     {
       "source": "/assets/(.*)",

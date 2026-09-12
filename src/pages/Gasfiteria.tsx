@@ -29,6 +29,7 @@ export default function Gasfiteria() {
       items={s.items}
       imagen={s.imagen}
       galeria={galeria}
+      rutaActual={s.ruta}
     />
   );
 }

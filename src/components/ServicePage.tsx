@@ -4,7 +4,7 @@ import { WhatsAppIcon } from "@/components/BrandIcons";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
-import { contacto } from "@/data/servicios";
+import { contacto, servicios } from "@/data/servicios";
 import { useDocumentMeta } from "@/hooks/useDocumentMeta";
 
 interface FotoTrabajo {
@@ -23,13 +23,16 @@ interface ServicePageProps {
   items: string[];
   imagen?: string;
   galeria?: FotoTrabajo[];
+  rutaActual: string;
 }
 
-export default function ServicePage({ titulo, descripcion, acento, items, imagen, galeria }: ServicePageProps) {
+export default function ServicePage({ titulo, descripcion, acento, items, imagen, galeria, rutaActual }: ServicePageProps) {
   useDocumentMeta({
     title: `${titulo} en Santiago | Soluciones Integrales M&N`,
     description: descripcion,
   });
+
+  const otrosServicios = servicios.filter((s) => s.ruta !== rutaActual);
 
   return (
     <div style={{ background: "#fff", minHeight: "100vh" }}>
@@ -227,6 +230,47 @@ export default function ServicePage({ titulo, descripcion, acento, items, imagen
           </div>
         </section>
       )}
+
+      {/* Enlazado interno: descubribilidad entre las 3 páginas de servicio */}
+      <section style={{ padding: "0 1.5rem 4rem", maxWidth: 900, margin: "0 auto" }}>
+        <h2 style={{
+          fontFamily: "'Manrope', sans-serif",
+          fontWeight: 800,
+          fontSize: "1.2rem",
+          letterSpacing: "-0.02em",
+          color: "#0F172A",
+          marginBottom: "1rem",
+        }}>
+          También podría interesarte
+        </h2>
+        <div style={{ display: "flex", flexWrap: "wrap", gap: "0.75rem" }}>
+          {otrosServicios.map((s) => (
+            <Link
+              key={s.ruta}
+              to={s.ruta}
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                gap: "0.2rem",
+                flex: "1 1 220px",
+                background: "#F8FAFE",
+                border: "1px solid #E2E8F0",
+                borderRadius: 10,
+                padding: "0.9rem 1.1rem",
+                textDecoration: "none",
+                borderLeft: `3px solid ${s.acento}`,
+              }}
+            >
+              <span style={{ fontFamily: "'Manrope', sans-serif", fontWeight: 700, fontSize: "0.95rem", color: "#0F172A" }}>
+                {s.nombre}
+              </span>
+              <span style={{ fontFamily: "'Inter', sans-serif", fontSize: "0.85rem", color: "#64748B" }}>
+                {s.descripcion}
+              </span>
+            </Link>
+          ))}
+        </div>
+      </section>
 
       {/* CTA */}
       <section style={{

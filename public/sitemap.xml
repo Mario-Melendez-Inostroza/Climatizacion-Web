@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://climatizacion-web.vercel.app/</loc>
+    <loc>https://www.solucionesintegralesmyn.cl/</loc>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://climatizacion-web.vercel.app/gasfiteria</loc>
+    <loc>https://www.solucionesintegralesmyn.cl/gasfiteria</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://climatizacion-web.vercel.app/climatizacion</loc>
+    <loc>https://www.solucionesintegralesmyn.cl/climatizacion</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://climatizacion-web.vercel.app/electricidad</loc>
+    <loc>https://www.solucionesintegralesmyn.cl/electricidad</loc>
     <priority>0.8</priority>
   </url>
 </urlset>
