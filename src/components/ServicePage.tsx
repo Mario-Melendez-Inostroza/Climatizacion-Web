@@ -12,6 +12,8 @@ interface FotoTrabajo {
   nombre: string;
   width: number;
   height: number;
+  /** Punto de la foto a mantener visible al recortarla en la miniatura (objectPosition). Por defecto "center". */
+  focus?: string;
 }
 
 interface ServicePageProps {
@@ -208,7 +210,7 @@ export default function ServicePage({ titulo, descripcion, acento, items, imagen
                   height={foto.height}
                   loading="lazy"
                   decoding="async"
-                  style={{ width: "100%", height: 170, objectFit: "cover", display: "block" }}
+                  style={{ width: "100%", height: 170, objectFit: "cover", objectPosition: foto.focus ?? "center", display: "block" }}
                 />
                 <figcaption style={{
                   padding: "0.75rem 1rem",

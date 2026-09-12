@@ -13,13 +13,13 @@ const s = servicios.find((x) => x.ruta === "/climatizacion")!;
 
 const galeria = [
   { src: fotoAireAcondicionado, nombre: "Instalación de aire acondicionado", width: 800, height: 450 },
-  { src: fotoSplitDormitorio1, nombre: "Instalación de split en dormitorio", width: 800, height: 1067 },
-  { src: fotoSplitDormitorio2, nombre: "Instalación de equipo split", width: 800, height: 1067 },
-  { src: fotoSplitBalcon, nombre: "Instalación de split en balcón", width: 800, height: 1067 },
-  { src: fotoUnidadExteriorMuro, nombre: "Instalación de unidad exterior en muro", width: 800, height: 1067 },
-  { src: fotoUnidadExteriorCubierta, nombre: "Instalación de unidad exterior bajo cubierta", width: 800, height: 1067 },
-  { src: fotoUnidadExteriorPatio, nombre: "Instalación de unidad exterior en patio", width: 800, height: 1067 },
-  { src: fotoUnidadExteriorTecho, nombre: "Instalación de unidad exterior en techo", width: 800, height: 1067 },
+  { src: fotoSplitDormitorio1, nombre: "Instalación de split en dormitorio", width: 800, height: 1067, focus: "center 22%" },
+  { src: fotoSplitDormitorio2, nombre: "Instalación de equipo split", width: 800, height: 1067, focus: "center 30%" },
+  { src: fotoSplitBalcon, nombre: "Instalación de split en balcón", width: 800, height: 1067, focus: "center 34%" },
+  { src: fotoUnidadExteriorMuro, nombre: "Instalación de unidad exterior en muro", width: 800, height: 1067, focus: "center 26%" },
+  { src: fotoUnidadExteriorCubierta, nombre: "Instalación de unidad exterior bajo cubierta", width: 800, height: 1067, focus: "center 32%" },
+  { src: fotoUnidadExteriorPatio, nombre: "Instalación de unidad exterior en patio", width: 800, height: 1067, focus: "center 68%" },
+  { src: fotoUnidadExteriorTecho, nombre: "Instalación de unidad exterior en techo", width: 800, height: 1067, focus: "center 46%" },
 ];
 
 export default function Climatizacion() {
