@@ -1,6 +1,12 @@
 {
   "redirects": [
     {
+      "source": "/",
+      "has": [{ "type": "host", "value": "climatizacion-web.vercel.app" }],
+      "destination": "https://www.solucionesintegralesmyn.cl/",
+      "permanent": true
+    },
+    {
       "source": "/:path*",
       "has": [{ "type": "host", "value": "climatizacion-web.vercel.app" }],
       "destination": "https://www.solucionesintegralesmyn.cl/:path*",
